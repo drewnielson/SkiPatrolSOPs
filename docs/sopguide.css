@@ -1,0 +1,103 @@
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 106px;
+  bottom: 0;
+  height: inherit;
+}
+@media (max-width:601px) {
+	.w3-sidebar {
+		top: 63px;
+	}
+}
+.w3-top {
+	background-color: #CC0000;
+	padding: 10px 0 10px 0;
+}
+
+.w3-main {
+	margin-top: 36px;
+}
+
+.w3-hover-red:focus {
+	color: #fff!important;
+	background-color:#f98d85!important;
+}
+
+.w3-red:focus {
+	color: #000000!important;
+	background-color: #e0e0eb!important;
+}
+
+.sample {
+	border: solid #3f51b5 6px;
+}
+
+.screenshot {
+	width: 100%;
+	max-width: 700px;
+	border: solid #3f51b5 3px;
+}
+
+.logo {
+	max-width: 300px;
+	height:auto;
+}
+
+.v4-table {
+	border-collapse: separate;
+	border-spacing: 5px;
+}
+
+.v4-table th, .v4-table td {
+	text-align:left;
+	padding: 5px;
+	vertical-align: top;
+}
+
+/*
+ * Style for "Skip to Content" links.  Should have an href linked to 
+ * a `.bypass-block-target` element.
+ */
+
+.bypass-block-link {
+	position: absolute;
+	text-decoration: none;
+	background: #ffffcc;
+	border-radius: 10px;
+	padding: 0.2em;
+	z-index: 10;
+}
+
+#skipNavLink {
+    color: #000;
+}
+
+.visually-hidden {
+	clip: rect(1px 1px 1px 1px);
+	/* IE 6/7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	margin: -1px;
+}
+
+
+.bypass-block-link:focus {
+	clip: auto;
+	height: auto;
+	overflow: visible;
+	position: absolute;
+	white-space: normal;
+	width: auto;
+	margin: auto;
+	z-index: 10;
+}
+
+.bypass-block-target:focus {
+	outline: none;
+}

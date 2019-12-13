@@ -41,23 +41,73 @@
 
   <div class="w3-row" style="padding-top: 64px">
     <div class="w3-margin w3-container">
-      <h1>Introduction to Trusted Tester Methods Workshop</h1>
-	  <h2>ICT Accessibility Testing Symposium - 2019</h2>
-      <p>A one-day workshop intended to provide an overview of the Trusted Tester process, review of some of the key test steps, and some tips and tricks for progressing through the Trusted Tester training course and certification.</p>
+      <h1>Lift Evacuation Process Guide</h1>
+      <label for="lift" class="w3-margin-right">Lift: </label>
+	  <select id="lift" name="lift">
+		<option>First Class</option>
+		<option>Dipsy</option>
+		<option>Alpine</option>
+		<option>Strata</option>
+		<option>Eastwind</option>
+	  </select>
     </div>
   </div>
 
   <div class="w3-row">
     <div class="w3-margin w3-container w3-card">
-      <h2>Workshop Goals</h2>
-      <ul>
-		<li>Provide an understanding of the Trusted Tester certification course</li>
-		<li>Introduce you to use of the ANDI tool</li>
-		<li>Give you hands-on experience testing using ANDI</li>
-		<li>Provide testing tips and tricks</li>
-		<li>Expose you to some of the FAQ</li>
-	  </ul>
-    </div>
+      <h2>Pre-Standby (Phase 0)</h2>
+	  <p class="w3-margin-left"><label for="stoptime" class="w3-margin-right">Lift stopped at: </label><input type="time" id="stoptime" name="stoptime"></p>
+		<fieldset class="w3-margin-bottom">
+			<legend><input type="checkbox" id="notifybase" name="notifybase" style="margin-left:5px;"><label for="notifybase"> 4 minutes: Notify Patrol Base</label></legend>
+			<table>
+				<tr>
+					<td><label for="notifiedat" class="w3-margin-right">Notified at:</label></td>
+					<td><input type="time" id="notifiedat"></td>
+				</tr>
+				<tr>
+					<td><label for="notifiedby" class="w3-margin-right">Notified by:</label></td>
+					<td><input type="text" id="notifiedby"></td>
+				</tr>
+			</table>
+		<span>Base to monitor Ch.1; listen for mechanic dispatch</span>
+		</fieldset>
+		
+		<fieldset class="w3-margin-bottom w3-margin-top">
+			<legend><input type="checkbox" id="notifylift" name="notifylift" style="margin-left:5px;"><label for="notifylift"> 5 minutes: Dispatch to notify Lift Maintenance</label> (if not already done)</legend>
+			<table>
+				<tr>
+					<td><label for="notifiedliftat" class="w3-margin-right">Notified at:</label></td>
+					<td><input type="time" id="notifiedliftat"></td>
+				</tr>
+				<tr>
+					<td><label for="notifiedliftname" class="w3-margin-right">Person notified:</label></td>
+					<td><input type="text" id="notifiedliftname"></td>
+				</tr>
+			</table>
+		<span>If lift maintenance is not available, notify resort management (MOD)</span>
+		</fieldset>
+		
+		<fieldset class="w3-margin-bottom w3-margin-top">
+			<legend><input type="checkbox" id="stranded" name="stranded" style="margin-left:5px;"><label for="stranded"> 10 minutes: Ascertain number of stranded staff</label></legend>
+			<table class="w3-table" id="tbStranded">
+				<thead>
+					<tr class="w3-red">
+						<th scope="col" class="w3-border w3-border-white"># of staff</th>
+						<th scope="col" class="w3-border w3-border-white">Span</th>
+						<th scope="col" class="w3-border w3-border-white">Chair</th>
+						<th scope="col" class="w3-border w3-border-white">Patrol / MS</th>
+					</tr>
+				</thead>
+				<tr class="w3-border-bottom w3-border-red">
+					<td><input type="number" style="width:50px"></td>
+					<td><input type="number" style="width:50px"></td>
+					<td><input type="number" style="width:60px"></td>
+					<td><input type="checkbox" id="patrol1"><label for="patrol1"> Patrol</label><br><input type="checkbox" id="ms1"><label for="ms1"> MS</label></td>
+				</tr>
+			</table>
+		<button class="w3-button w3-round w3-theme w3-margin" onclick="addStranded()">Add row</button>
+		</fieldset>
+	<p><strong>WAIT FOR INSTRUCTION FROM RESORT MANAGEMENT</strong></p>
   </div>
 
   <div class="w3-row">
@@ -91,6 +141,7 @@
 <!-- END MAIN -->
 
 <script src="sopguide.js"></script>
+<script src="jquery-3.4.1.min.js"></script>
 
 </body>
 </html>

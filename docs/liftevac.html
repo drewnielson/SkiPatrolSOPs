@@ -23,8 +23,8 @@
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-light-grey w3-animate-left" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-red w3-hide-large" title="Close Menu"><i class="fa fa-remove"></i></a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-red" href="index.html">Home</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="liftevac.html">Lift Evac</a>
+  <a class="w3-bar-item w3-button w3-hover-red" href="index.html">Home</a>
+  <a class="w3-bar-item w3-button w3-red" href="liftevac.html">Lift Evac</a>
   <a class="w3-bar-item w3-button w3-hover-red" href="#">Lost Child</a>
   <a class="w3-bar-item w3-button w3-hover-red" href="#">Open</a>
   <a class="w3-bar-item w3-button w3-hover-red" href="#">Close</a>
@@ -41,8 +41,14 @@
 
   <div class="w3-row" style="padding-top: 64px">
     <div class="w3-margin w3-container">
-      <h1>Lift Evacuation Process Guide</h1>
-      <label for="lift" class="w3-margin-right">Lift: </label>
+      <h1>Lift Evac Process Guide</h1>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-margin w3-container w3-card">
+      <h2>Pre-Standby (Phase 0)</h2>
+	  <label for="lift" class="w3-margin-right">Lift: </label>
 	  <select id="lift" name="lift">
 		<option>First Class</option>
 		<option>Dipsy</option>
@@ -50,22 +56,16 @@
 		<option>Strata</option>
 		<option>Eastwind</option>
 	  </select>
-    </div>
-  </div>
-
-  <div class="w3-row">
-    <div class="w3-margin w3-container w3-card">
-      <h2>Pre-Standby (Phase 0)</h2>
-	  <p class="w3-margin-left"><label for="stoptime" class="w3-margin-right">Lift stopped at: </label><input type="time" id="stoptime" name="stoptime"></p>
+	  <p><label for="stoptime" class="w3-margin-right">Lift stopped at: </label><input type="time" id="stoptime" name="stoptime"></p>
 		<fieldset class="w3-margin-bottom">
-			<legend><input type="checkbox" id="notifybase" name="notifybase" style="margin-left:5px;"><label for="notifybase"> 4 minutes: Notify Patrol Base</label></legend>
+			<legend><input type="checkbox" id="notifybase" name="notifybase" style="margin-left:5px;"><label for="notifybase"> 4 min: Notify Patrol Base</label></legend>
 			<table>
 				<tr>
-					<td><label for="notifiedat" class="w3-margin-right">Notified at:</label></td>
+					<td><label for="notifiedat" class="w3-margin-right">Notified:</label></td>
 					<td><input type="time" id="notifiedat"></td>
 				</tr>
 				<tr>
-					<td><label for="notifiedby" class="w3-margin-right">Notified by:</label></td>
+					<td><label for="notifiedby" class="w3-margin-right">By:</label></td>
 					<td><input type="text" id="notifiedby"></td>
 				</tr>
 			</table>
@@ -73,14 +73,15 @@
 		</fieldset>
 		
 		<fieldset class="w3-margin-bottom w3-margin-top">
-			<legend><input type="checkbox" id="notifylift" name="notifylift" style="margin-left:5px;"><label for="notifylift"> 5 minutes: Dispatch to notify Lift Maintenance</label> (if not already done)</legend>
+			<legend><input type="checkbox" id="notifylift" name="notifylift" style="margin-left:5px;"><label for="notifylift"> 5 min: Notify Lift Maintenance</label></legend>
+			<p>(if not already done)</p>
 			<table>
 				<tr>
-					<td><label for="notifiedliftat" class="w3-margin-right">Notified at:</label></td>
+					<td><label for="notifiedliftat" class="w3-margin-right">Notified:</label></td>
 					<td><input type="time" id="notifiedliftat"></td>
 				</tr>
 				<tr>
-					<td><label for="notifiedliftname" class="w3-margin-right">Person notified:</label></td>
+					<td><label for="notifiedliftname" class="w3-margin-right">Whom:</label></td>
 					<td><input type="text" id="notifiedliftname"></td>
 				</tr>
 			</table>
@@ -88,21 +89,21 @@
 		</fieldset>
 		
 		<fieldset class="w3-margin-bottom w3-margin-top">
-			<legend><input type="checkbox" id="stranded" name="stranded" style="margin-left:5px;"><label for="stranded"> 10 minutes: Ascertain number of stranded staff</label></legend>
+			<legend><input type="checkbox" id="stranded" name="stranded" style="margin-left:5px;"><label for="stranded"> 10 min: # stranded staff</label></legend>
 			<table class="w3-table" id="tbStranded">
 				<thead>
 					<tr class="w3-red">
 						<th scope="col" class="w3-border w3-border-white"># of staff</th>
 						<th scope="col" class="w3-border w3-border-white">Span</th>
 						<th scope="col" class="w3-border w3-border-white">Chair</th>
-						<th scope="col" class="w3-border w3-border-white">Patrol / MS</th>
+						<th scope="col" class="w3-border w3-border-white">SP / MS</th>
 					</tr>
 				</thead>
 				<tr class="w3-border-bottom w3-border-red">
 					<td><input type="number" style="width:50px"></td>
 					<td><input type="number" style="width:50px"></td>
 					<td><input type="number" style="width:60px"></td>
-					<td><input type="checkbox" id="patrol1"><label for="patrol1"> Patrol</label><br><input type="checkbox" id="ms1"><label for="ms1"> MS</label></td>
+					<td><input type="checkbox" id="patrol1"><label for="patrol1"> SP</label><br><input type="checkbox" id="ms1"><label for="ms1"> MS</label></td>
 				</tr>
 			</table>
 		<button class="w3-button w3-round w3-theme w3-margin" onclick="addStranded()">Add row</button>

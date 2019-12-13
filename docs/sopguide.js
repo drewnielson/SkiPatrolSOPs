@@ -25,5 +25,5 @@ function w3_close() {
 var strandedrows = 1;
 function addStranded() {
 	strandedrows++;
-	$("#tbStranded").append("<tr class='w3-border-bottom w3-border-red'><td><input type='number' style='width:50px'></td><td><input type='number' style='width:50px'></td><td><input type='number' style='width:60px'></td><td><input type='checkbox' id='patrol" + strandedrows + "'><label for='patrol" + strandedrows + "'> Patrol</label><br><input type='checkbox' id='ms" + strandedrows + "'><label for='ms" + strandedrows + "'> MS</label></td></tr>");
+	$("#tbStranded").append("<tr class='w3-border-bottom w3-border-red'><td><input type='number' style='width:50px'></td><td><input type='number' style='width:50px'></td><td><input type='number' style='width:60px'></td><td><input type='checkbox' id='patrol" + strandedrows + "'><label for='patrol" + strandedrows + "'> SP</label><br><input type='checkbox' id='ms" + strandedrows + "'><label for='ms" + strandedrows + "'> MS</label></td></tr>");
 }

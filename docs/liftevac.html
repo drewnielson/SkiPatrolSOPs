@@ -58,7 +58,7 @@
 	  </select>
 	  <p><label for="stoptime" class="w3-margin-right">Lift stopped at: </label><input type="time" id="stoptime" name="stoptime"></p>
 		<fieldset class="w3-margin-bottom">
-			<legend><input type="checkbox" id="notifybase" name="notifybase" style="margin-left:5px;"><label for="notifybase"> 4 min: Notify Patrol Base</label></legend>
+			<legend> 4 min: Notify Patrol Base</legend>
 			<table>
 				<tr>
 					<td><label for="notifiedat" class="w3-margin-right">Notified:</label></td>
@@ -73,7 +73,7 @@
 		</fieldset>
 		
 		<fieldset class="w3-margin-bottom w3-margin-top">
-			<legend><input type="checkbox" id="notifylift" name="notifylift" style="margin-left:5px;"><label for="notifylift"> 5 min: Notify Lift Maintenance</label></legend>
+			<legend> 5 min: Notify Lift Maintenance</legend>
 			<p>(if not already done)</p>
 			<table>
 				<tr>
@@ -89,7 +89,7 @@
 		</fieldset>
 		
 		<fieldset class="w3-margin-bottom w3-margin-top">
-			<legend><input type="checkbox" id="stranded" name="stranded" style="margin-left:5px;"><label for="stranded"> 10 min: Stranded Staff</label></legend>
+			<legend> 10 min: Stranded Staff</legend>
 			<table class="w3-table" id="tbStranded">
 				<thead>
 					<tr class="w3-red">
@@ -113,20 +113,101 @@
 
   <div class="w3-row">
     <div class="w3-margin w3-container w3-card">
-      <h2>Today's Topics</h2>
-      <ul>
-		<li>Quick overview (Ann Marie)</li>
-		<li>Topic 4 Keyboard and Focus (Ann Marie)</li>
-		<li>Topic 10 Content Structure (Ann Marie)</li>
-		<li>Topic 6 Links and Buttons (Andrew)</li>
-		<li>Topic 5 Forms (Kristen)</li>
-		<li>Topic 7 Images (Andrew)</li>
-		<li>Questions</li>
-		<li>Wrap-up and certification process</li>
-	  </ul>
+      <h2>Standby (Phase 1)</h2>
+	  On order from Resort Management
+      <table>
+			<tr>
+				<td><label for="p1notified" class="w3-margin-right">Notified:</label></td>
+				<td><input type="time" id="p1notified"></td>
+			</tr>
+			<tr>
+				<td><label for="p1notifyer" class="w3-margin-right">By:</label></td>
+				<td><input type="text" id="p1notifyer"></td>
+			</tr>
+		</table>
+		<ul>
+			<li>Establish communication network (ch 2)</li>
+			<li>Designate Evac Supervisor</li>
+			<li>All available personnel to Top Duty</li>
+			<li>Assemble evac teams</li>
+			<li>Break evac bag seals</li>
+			<li>Belayers put on harnesses</li>
+			<li>Reposition resources as needed</li>
+		</ul>
+    </div>
+  </div>
+  
+  <div class="w3-row">
+    <div class="w3-margin w3-container w3-card">
+      <h2>Deploy (Phase 2)</h2>
+	  On order from Resort Management
+      <table>
+			<tr>
+				<td><label for="p2notified" class="w3-margin-right">Notified:</label></td>
+				<td><input type="time" id="p2notified"></td>
+			</tr>
+			<tr>
+				<td><label for="p2notifyer" class="w3-margin-right">By:</label></td>
+				<td><input type="text" id="p2notifyer"></td>
+			</tr>
+		</table>
+		<ul>
+			<li>Teams deploy to assigned spans and STANDBY</li>
+			<li>Teams report "in position"</li>
+			<li>Evac Supervisor notifies Resort Management when ready</li>
+		</ul>
     </div>
   </div>
 
+  <div class="w3-row">
+    <div class="w3-margin w3-container w3-card">
+      <h2>Evacuate (Phase 3)</h2>
+	  On order from Resort Management
+      <table>
+			<tr>
+				<td><label for="p3notified" class="w3-margin-right">Notified:</label></td>
+				<td><input type="time" id="p3notified"></td>
+			</tr>
+			<tr>
+				<td><label for="p3notifyer" class="w3-margin-right">By:</label></td>
+				<td><input type="text" id="p3notifyer"></td>
+			</tr>
+		</table>
+		<ul>
+			<li>Lift power lockout: Evacuation Supervisor MUST hear and POSITIVELY acknowledge that the lift has been locked out before starting by the Lift Supervisor</li>
+			<li>Order evacuation</li>
+			<li>Each team reports confirmation</li>
+			<li>Begin evacuation</li>
+			<li>Mountain Safety: Record the name, address, phone, chair number and time of guest evacuation</li>
+			<li><strong>10 minutes updates to management</strong></li>
+			<li>Evacuation Supervisor: Direct final check of all chairs and sweep of the area; obtain “all clear” confirmation</li>
+
+		</ul>
+		
+    </div>
+  </div>
+  <div class="w3-row">
+    <div class="w3-margin w3-container w3-card">
+      <h2>Post Evacuation (Phase 4)</h2>
+	  On order from Resort Management
+      <table>
+			<tr>
+				<td><label for="p4notified" class="w3-margin-right">Notified:</label></td>
+				<td><input type="time" id="p4notified"></td>
+			</tr>
+			<tr>
+				<td><label for="p4notifyer" class="w3-margin-right">By:</label></td>
+				<td><input type="text" id="p4notifyer"></td>
+			</tr>
+		</table>
+		<ul>
+			<li>Data compiled to management</li>
+			<li>Debrief and repack gear</li>
+			<li>Note any damaged or missing gear to Evacuation Supervisor</li>
+		</ul>
+    </div>
+  </div>
+  
 
 <!-- Footer -->
   <footer id="myFooter">

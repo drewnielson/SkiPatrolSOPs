@@ -5,6 +5,13 @@ label,legend {
 	font-weight:700;
 }
 
+#timer {
+	color:white;
+	font-weight:700;
+	margin-right: 10px;
+	font-size: 24px;
+}
+
 .step {
 	margin-left: 30px;
 }
@@ -19,6 +26,9 @@ label,legend {
 @media (max-width:601px) {
 	.w3-sidebar {
 		top: 63px;
+	}
+	#timer {
+		font-size:14px;
 	}
 }
 .w3-top {
@@ -111,3 +121,4 @@ label,legend {
 .bypass-block-target:focus {
 	outline: none;
 }
+

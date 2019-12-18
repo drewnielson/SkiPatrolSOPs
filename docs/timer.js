@@ -3,7 +3,7 @@
 	var y = new Date().getFullYear();
 	var m = new Date().getMonth() + 1;
 	var d = new Date().getDate();
-	newCountUpTime = document.getElementById("stoptime").value;
+	newCountUpTime = document.getElementById("incidenttime").value;
 	countUpDate = new Date(m + "/" + d + "/" + y + " " + newCountUpTime);
 }
 

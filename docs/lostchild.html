@@ -17,7 +17,7 @@
 <!-- Navbar -->
 <div class="w3-top">
 	<a href="#main-content" id="skipNavLink" class="visually-hidden visible-when-focused bypass-block-link" tabindex="1">Skip to Content</a>
-	<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+	<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()" aria-label="Menu" id="openCloseMenu"><i class="fa fa-bars"></i></a>
 	<span id="timer" class="w3-right"></span>
     <a href="index.html" class="w3-bar-item w3-hide-small"><img src="images/SOPGuideLogo.png" alt="Liberty Ski Patrol SOP Guide Logo" class="splogo" style="margin-left:10px;"></img></a>
 	<a href="index.html" class="w3-bar-item w3-hide-medium w3-hide-large"><img src="images/SOPGuideSmall.png" alt="Liberty Ski Patrol SOP Guide Logo" style="margin-left:10px;"></img></a>
@@ -45,173 +45,36 @@
 
   <div class="w3-row" style="padding-top: 64px">
     <div class="w3-margin w3-container">
-      <h1>Lift Evac Process Guide</h1>
+      <h1>Lost Child Process Guide</h1>
     </div>
   </div>
 
   <div class="w3-row">
     <div class="w3-margin w3-container w3-card">
-      <h2>Assess (Phase 0)</h2>
-	  <label for="lift" class="w3-margin-right">Lift: </label>
-	  <select id="lift" name="lift">
-		<option>First Class</option>
-		<option>Dipsy</option>
-		<option>Alpine</option>
-		<option>Strata</option>
-		<option>Eastwind</option>
-	  </select>
-	  <p><label for="stoptime" class="w3-margin-right">Lift stopped at: </label><input type="time" id="stoptime" name="stoptime" oninput="showTime()"></p>
-		<fieldset class="w3-margin-bottom">
-			<legend> 4 min: Notify Patrol Base</legend>
-			<table>
-				<tr>
-					<td><label for="notifiedat" class="w3-margin-right">Notified:</label></td>
-					<td><input type="time" id="notifiedat"></td>
-				</tr>
-				<tr>
-					<td><label for="notifiedby" class="w3-margin-right">By:</label></td>
-					<td><input type="text" id="notifiedby"></td>
-				</tr>
-			</table>
-		<ul><li>Base to monitor Ch.1; listen for mechanic dispatch</li></ul>
-		</fieldset>
-		
-		<fieldset class="w3-margin-bottom w3-margin-top">
-			<legend> 5 min: Notify Lift Maintenance</legend>
-			<p>(if not already done)</p>
-			<table>
-				<tr>
-					<td><label for="notifiedliftat" class="w3-margin-right">Notified:</label></td>
-					<td><input type="time" id="notifiedliftat"></td>
-				</tr>
-				<tr>
-					<td><label for="notifiedliftname" class="w3-margin-right">Whom:</label></td>
-					<td><input type="text" id="notifiedliftname"></td>
-				</tr>
-			</table>
-		<ul><li>If lift maintenance is not available, notify resort management (MOD)</li></ul>
-		</fieldset>
-		
-		<fieldset class="w3-margin-bottom w3-margin-top">
-			<legend> 10 min: Stranded Staff</legend>
-			<table class="w3-table" id="tbStranded">
-				<thead>
-					<tr class="w3-red">
-						<th scope="col" class="w3-border w3-border-white"># of staff</th>
-						<th scope="col" class="w3-border w3-border-white">Tower#</th>
-						<th scope="col" class="w3-border w3-border-white">Chair</th>
-						<th scope="col" class="w3-border w3-border-white">SP / MS</th>
-					</tr>
-				</thead>
-				<tr class="w3-border-bottom w3-border-red">
-					<td><input type="number" style="width:50px"></td>
-					<td><input type="number" style="width:50px"></td>
-					<td><input type="number" style="width:60px"></td>
-					<td><input type="checkbox" id="patrol1"><label for="patrol1"> SP</label><br><input type="checkbox" id="ms1"><label for="ms1"> MS</label></td>
-				</tr>
-			</table>
-		<button class="w3-button w3-round w3-theme w3-margin" onclick="addStranded()">Add row</button>
-		</fieldset>
-	<p><strong>WAIT FOR INSTRUCTION FROM RESORT MANAGEMENT</strong></p>
+      <h2>Step 1</h2>
+		<ul>
+			<li>Security immediately moves to designated exit points:
+				<ul>
+					<li>Circle area</li>
+					<li>Main parking lot exit</li>
+					<li>Hotel parking exit</li>
+				</ul>
+			</li>
+			<li>Ski Patrol / Mountain Safety immediately moves to designated exit points:
+				<ul>
+					<li>Ski patrol ambulance exit (gate near Alpine lift)</li>
+					<li>Backside gate exit</li>
+					<li>Whitney's Way cut-over to Boulder Ridge parking lot</li>
+				</ul>
+			</li>
+			<li>Lift Ops supervisor to notify each lift station
+				<ul>
+					<li>Operators post message and start looking for child</li>
+				</ul>
+			</li>
+		</ul>
   </div>
 
-  <div class="w3-row">
-    <div class="w3-margin w3-container w3-card">
-      <h2>Standby (Phase 1)</h2>
-	  On order from Resort Management
-      <table>
-			<tr>
-				<td><label for="p1notified" class="w3-margin-right">Notified:</label></td>
-				<td><input type="time" id="p1notified"></td>
-			</tr>
-			<tr>
-				<td><label for="p1notifyer" class="w3-margin-right">By:</label></td>
-				<td><input type="text" id="p1notifyer"></td>
-			</tr>
-		</table>
-		<ul>
-			<li>Establish communication network (ch 2)</li>
-			<li>Designate Evac Supervisor</li>
-			<li>All available personnel to Top Duty</li>
-			<li>Assemble evac teams</li>
-			<li>Break evac bag seals</li>
-			<li>Belayers put on harnesses</li>
-			<li>Reposition resources as needed</li>
-		</ul>
-    </div>
-  </div>
-  
-  <div class="w3-row">
-    <div class="w3-margin w3-container w3-card">
-      <h2>Deploy (Phase 2)</h2>
-	  On order from Resort Management
-      <table>
-			<tr>
-				<td><label for="p2notified" class="w3-margin-right">Notified:</label></td>
-				<td><input type="time" id="p2notified"></td>
-			</tr>
-			<tr>
-				<td><label for="p2notifyer" class="w3-margin-right">By:</label></td>
-				<td><input type="text" id="p2notifyer"></td>
-			</tr>
-		</table>
-		<ul>
-			<li>Teams deploy to assigned spans and STANDBY</li>
-			<li>Teams report "in position"</li>
-			<li>Evac Supervisor notifies Resort Management when ready</li>
-		</ul>
-    </div>
-  </div>
-
-  <div class="w3-row">
-    <div class="w3-margin w3-container w3-card">
-      <h2>Evacuate (Phase 3)</h2>
-	  On order from Resort Management
-      <table>
-			<tr>
-				<td><label for="p3notified" class="w3-margin-right">Notified:</label></td>
-				<td><input type="time" id="p3notified"></td>
-			</tr>
-			<tr>
-				<td><label for="p3notifyer" class="w3-margin-right">By:</label></td>
-				<td><input type="text" id="p3notifyer"></td>
-			</tr>
-		</table>
-		<ul>
-			<li>Lift power lockout: Evacuation Supervisor MUST hear and POSITIVELY acknowledge that the lift has been locked out before starting by the Lift Supervisor</li>
-			<li>Order evacuation</li>
-			<li>Each team reports confirmation</li>
-			<li>Begin evacuation</li>
-			<li>Mountain Safety: Record the name, address, phone, chair number and time of guest evacuation</li>
-			<li><strong>10 minutes updates to management</strong></li>
-			<li>Evacuation Supervisor: Direct final check of all chairs and sweep of the area; obtain “all clear” confirmation</li>
-
-		</ul>
-		
-    </div>
-  </div>
-  <div class="w3-row">
-    <div class="w3-margin w3-container w3-card">
-      <h2>Post Evacuation (Phase 4)</h2>
-	  On order from Resort Management
-      <table>
-			<tr>
-				<td><label for="p4notified" class="w3-margin-right">Notified:</label></td>
-				<td><input type="time" id="p4notified"></td>
-			</tr>
-			<tr>
-				<td><label for="p4notifyer" class="w3-margin-right">By:</label></td>
-				<td><input type="text" id="p4notifyer"></td>
-			</tr>
-		</table>
-		<ul>
-			<li>Data compiled to management</li>
-			<li>Debrief and repack gear</li>
-			<li>Note any damaged or missing gear to Evacuation Supervisor</li>
-		</ul>
-    </div>
-  </div>
-  
 
 <!-- Footer -->
   <footer id="myFooter">

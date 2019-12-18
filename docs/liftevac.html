@@ -61,8 +61,8 @@
 		<option>Eastwind</option>
 	  </select>
 	  <p><label for="stoptime" class="w3-margin-right">Lift stopped at: </label><input type="time" id="stoptime" name="stoptime" oninput="showTime()"></p>
-		<fieldset class="w3-margin-bottom">
-			<legend> 4 min: Notify Patrol Base</legend>
+		<div class="w3-margin-bottom w3-border w3-border-red" style="padding: 5px; margin:-8px;">
+			<h6> 4 min: Notify Patrol Base</h6>
 			<table>
 				<tr>
 					<td><label for="notifiedat" class="w3-margin-right">Notified:</label></td>
@@ -74,10 +74,10 @@
 				</tr>
 			</table>
 		<ul><li>Base to monitor Ch.1; listen for mechanic dispatch</li></ul>
-		</fieldset>
+		</div>
 		
-		<fieldset class="w3-margin-bottom w3-margin-top">
-			<legend> 5 min: Notify Lift Maintenance</legend>
+		<div class="w3-margin-bottom w3-margin-top w3-border w3-border-red" style="padding: 5px; margin:-8px;">
+			<h6> 5 min: Notify Lift Maintenance</h6>
 			<p>(if not already done)</p>
 			<table>
 				<tr>
@@ -90,10 +90,10 @@
 				</tr>
 			</table>
 		<ul><li>If lift maintenance is not available, notify resort management (MOD)</li></ul>
-		</fieldset>
+		</div>
 		
-		<fieldset class="w3-margin-bottom w3-margin-top">
-			<legend> 10 min: Stranded Staff</legend>
+		<div class="w3-margin-bottom w3-margin-top w3-border w3-border-red" style="padding: 5px; margin:-8px;">
+			<h6> 10 min: Stranded Staff</h6>
 			<table class="w3-table" id="tbStranded">
 				<thead>
 					<tr class="w3-red">
@@ -111,7 +111,7 @@
 				</tr>
 			</table>
 		<button class="w3-button w3-round w3-theme w3-margin" onclick="addStranded()">Add row</button>
-		</fieldset>
+		</div>
 	<p><strong>WAIT FOR INSTRUCTION FROM RESORT MANAGEMENT</strong></p>
   </div>
 

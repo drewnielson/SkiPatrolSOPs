@@ -17,7 +17,7 @@
 <!-- Navbar -->
 <div class="w3-top">
 	<a href="#main-content" id="skipNavLink" class="visually-hidden visible-when-focused bypass-block-link" tabindex="1">Skip to Content</a>
-	<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()" aria-label="Menu" id="openCloseMenu"><i class="fa fa-bars"></i></a>
+	<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 	<span id="timer" class="w3-right"></span>
     <a href="index.html" class="w3-bar-item w3-hide-small"><img src="images/SOPGuideLogo.png" alt="Liberty Ski Patrol SOP Guide Logo" class="splogo" style="margin-left:10px;"></img></a>
 	<a href="index.html" class="w3-bar-item w3-hide-medium w3-hide-large"><img src="images/SOPGuideSmall.png" alt="Liberty Ski Patrol SOP Guide Logo" style="margin-left:10px;"></img></a>
@@ -28,8 +28,8 @@
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-red w3-hide-large" title="Close Menu"><i class="fa fa-remove"></i></a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
   <a class="w3-bar-item w3-button w3-hover-red" href="index.html">Home</a>
-  <a class="w3-bar-item w3-button w3-red" href="liftevac.html">Lift Evac</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="lostchild.html">Lost Child</a>
+  <a class="w3-bar-item w3-button w3-hover-red" href="liftevac.html">Lift Evac</a>
+  <a class="w3-bar-item w3-button w3-red" href="lostchild.html">Lost Child</a>
   <a class="w3-bar-item w3-button w3-hover-red" href="#">Open</a>
   <a class="w3-bar-item w3-button w3-hover-red" href="#">Close</a>
   <a class="w3-bar-item w3-button w3-hover-red" href="#" style="border-top: 3px solid #f32617;margin-top:64px;">Site Map</a>
@@ -53,7 +53,7 @@
     <div class="w3-margin w3-container w3-card">
       <h2>Assess (Phase 0)</h2>
 	  <label for="lift" class="w3-margin-right">Lift: </label>
-	  <select id="lift" name="lift" class="w3-round w3-button w3-theme">
+	  <select id="lift" name="lift">
 		<option>First Class</option>
 		<option>Dipsy</option>
 		<option>Alpine</option>
@@ -97,16 +97,16 @@
 			<table class="w3-table" id="tbStranded">
 				<thead>
 					<tr class="w3-red">
-						<th scope="col" class="w3-border w3-border-white" id="staff"># of staff</th>
-						<th scope="col" class="w3-border w3-border-white" id="tower">Tower #</th>
-						<th scope="col" class="w3-border w3-border-white" id="chair">Chair</th>
+						<th scope="col" class="w3-border w3-border-white"># of staff</th>
+						<th scope="col" class="w3-border w3-border-white">Tower#</th>
+						<th scope="col" class="w3-border w3-border-white">Chair</th>
 						<th scope="col" class="w3-border w3-border-white">SP / MS</th>
 					</tr>
 				</thead>
 				<tr class="w3-border-bottom w3-border-red">
-					<td><input type="number" style="width:50px" aria-labelledby="staff"></td>
-					<td><input type="number" style="width:50px"aria-labelledby="tower"></td>
-					<td><input type="number" style="width:60px"aria-labelledby="chair"></td>
+					<td><input type="number" style="width:50px"></td>
+					<td><input type="number" style="width:50px"></td>
+					<td><input type="number" style="width:60px"></td>
 					<td><input type="checkbox" id="patrol1"><label for="patrol1"> SP</label><br><input type="checkbox" id="ms1"><label for="ms1"> MS</label></td>
 				</tr>
 			</table>

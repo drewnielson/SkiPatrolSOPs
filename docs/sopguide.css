@@ -12,6 +12,14 @@ label,legend {
 	font-size: 24px;
 }
 
+fieldset {
+	border: none;
+}
+
+.substep {
+	margin: 12px -8px 12px -8px;
+	padding: 5px;
+}
 .step {
 	margin-left: 30px;
 }

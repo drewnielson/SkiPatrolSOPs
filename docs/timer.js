@@ -1,14 +1,7 @@
 // Timer 
- function showTime() {
-	var y = new Date().getFullYear();
-	var m = new Date().getMonth() + 1;
-	var d = new Date().getDate();
-	newCountUpTime = document.getElementById("incidenttime").value;
-	countUpDate = new Date(m + "/" + d + "/" + y + " " + newCountUpTime);
-}
 
 // Set the date/time we're counting from starting with now
-var countUpDate = new Date();;
+var countUpDate = new Date();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -27,11 +20,21 @@ var x = setInterval(function() {
   // Output the result in an element with id="timer"
   document.getElementById("timer").innerHTML = hours + "h"
   + minutes + "m" + seconds + "s";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "";
-	alert("You must enter a time that occurs in the past");
-  }
 }, 1000);
+
+// Set the timer based on the value in the lift stopped time field
+function showTime() {
+	var y = new Date().getFullYear();
+	var m = new Date().getMonth() + 1;
+	var d = new Date().getDate();
+	var newCountUpTime = document.getElementById("incidenttime").value;
+	var newCountUpDate = new Date(m + "/" + d + "/" + y + " " + newCountUpTime);
+	var now = new Date().getTime();
+	var newDistance = now - newCountUpDate;
+	
+	if (newDistance < 0) {
+		alert("You must enter a time that occurs in the past");
+	} else {
+		countUpDate = newCountUpDate;
+	}
+}

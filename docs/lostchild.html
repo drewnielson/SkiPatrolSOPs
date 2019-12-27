@@ -43,11 +43,49 @@
 <main id="main-content">
 <div class="w3-main" style="margin-left:250px; margin-top:36px;">
 
+
   <div class="w3-row" style="padding-top: 64px">
     <div class="w3-margin w3-container">
       <h1>Lost Child Process Guide</h1>
     </div>
   </div>
+
+	<div class="w3-margin w3-container w3-card w3-row">
+      <h2>Assess</h2>
+	  <table>
+			<tr>
+				<td><label for="incidenttime" class="w3-margin-right">Reported lost at: </label></td>
+				<td><input type="time" id="incidenttime" name="incidenttime" oninput="showTime()"></td>
+			</tr>
+			<tr>
+				<td><label for="notifiedby" class="w3-margin-right">Notified by:</label></td>
+				<td><input type="text" id="notifiedby"></td>
+			</tr>
+			<tr>
+				<td><label for="notifierContact" class="w3-margin-right">Contact #:</label></td>
+				<td><input type="tel" id="notifierContact" placeholder="888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"  ></td>
+			</tr>
+		</table>
+	  
+	  <div class="w3-row w3-round w3-border w3-border-red substep">
+		<h6>Interview of reporting person:</h6>
+		<table>
+			<tr>
+				<td><label for="childName">Child's name:</label></td>
+				<td><input type="text" id="childName"></input></td>
+			</tr>
+			<tr>
+				<td><label for="childAge">Child's age:</label></td>
+				<td><input type="number" id="childAge"></input></td>
+			</tr>
+			<tr>
+				<td><label id="childGender">Child's gender:</label></td>
+				<td><input type="radio" name="gender" value="Male" id="genderM" aria-describedby="childGender"><label for="genderM">Male</label></input><input type="radio" name="gender" value="Femle" id="genderF" style="margin-left:5px;" aria-describedby="childGender"><label for="genderF">Female</label></input></td>
+			</tr>
+		</table>
+		<p><label for="descr">Child's description:</label><br>(Hair/hat/helmet color, jacket/shirt color, pants color, distinguishing characteristics)<br><textarea id="descr" style="width:100%"></textarea></p>
+	  </div>
+	</div>
 
   <div class="w3-row">
     <div class="w3-margin w3-container w3-card">
@@ -75,6 +113,7 @@
 		</ul>
   </div>
 
+</div>
 
 <!-- Footer -->
   <footer id="myFooter">
@@ -86,7 +125,7 @@
   </footer>
 
 
-</div>
+
 </main>
 <!-- END MAIN -->
 

@@ -26,12 +26,12 @@
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-light-grey w3-animate-left" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-red w3-hide-large" title="Close Menu"><i class="fa fa-remove"></i></a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-red" href="index.html">Home</a>
+  <a class="w3-bar-item w3-button w3-hover-red" href="index.html">Home</a>
   <a class="w3-bar-item w3-button w3-hover-red" href="liftevac.html">Lift Evac</a>
   <a class="w3-bar-item w3-button w3-hover-red" href="lostchild.html">Lost Child</a>
   <a class="w3-bar-item w3-button w3-hover-red" href="open.html">Open</a>
   <a class="w3-bar-item w3-button w3-hover-red" href="close.html">Close</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="skiSwapConvFee.html">Ski Swap Bookmarlets</a>
+  <a class="w3-bar-item w3-button w3-red" href="skiSwapConvFee.html">Ski Swap Bookmarlets</a>
   
 </nav>
 
@@ -44,25 +44,12 @@
 
   <div class="w3-row" style="padding-top: 64px">
     <div class="w3-margin w3-container">
-      <h1>SOP Guide</h1>
-      <p>Use the navigation menu/bar or the links below to get to the applicable process guide. Based on feedback and continued use, more SOPs and/or other relevant documents may be added.</p>
-	  <p><strong>Tip:</strong> To add a shortcut to this site directly on you mobile device homescreen, <a href="https://natomasunified.org/kb/add-website-to-mobile-device-home-screen/">follow these instructions</a>.</p>
-	  <p><strong>NOTE:</strong> Although the SOP guides contain form elements, the information that you enter in the form fields <strong>WILL NOT</strong> be recorded or saved in any database. As soon as you refresh the page, all form data will be cleared.</p>
-    </div>
-  </div>
-
-  <div class="w3-row">
-    <div class="w3-margin w3-container">
-      <h2>Current SOPs / Checklists</h2>
+      <h1>Ski Swap Convenience Fee Bookmarklets</h1>
+      <p>Drag and links below to your bookmarks bar to create bookmarklets that will calculate and populate  the convenince fee for a transaction based on the Grand Total of the items currently in the Sell Items list of items.</p>
+      <p>Execute the bookmarklets in the same order that they are listed below in ordre to calculate and populate the convenience fee in the Add Item line.</p>
       <ul>
-        <li><a href="liftevac.html">Lift Evac</a></li>
-        <li><a href="lostchild.html">Lost Child</a></li>
-        <li><a href="open.html">Open</a></li>
-        <li><a href="close.html">Close</a></li>
-	    </ul>
-      <h2>Other Stuff</h2>
-      <ul>
-        <li><a href="skiSwapConvFee.html">Ski Swap Convenience Fee Bookmarklets</a></li>
+        <li><a href="javascript:void((function() {convFeeCalcScript=document.createElement('script');convFeeCalcScript.setAttribute('src','https://code.jquery.com/jquery-3.6.0.min.js'); document.body.appendChild(convFeeCalcScript);})());">1 - Prep Total</a></li>
+        <li><a href="javascript:void((function() {totalText=$('h2:contains(Grand Total)').text();console.log(totalText);numIndex=totalText.indexOf('$');calcStr=totalText.substr(numIndex + 1); calcNum=parseFloat(calcStr);console.log(calcStr);console.log(calcNum);let convFee=calcNum * .025;convFee=convFee.toFixed(2);console.log(convFee);$('input[name=Add_ItemName]').attr('value', 'Convenience Fee');$('select[name=Add_Type] option:contains(Clothing)').removeAttr('selected');$('select[name=Add_Type] option:contains(Convenience Fee)').attr('selected', 'true');$('input[name=Add_AskingPrice]').attr('value',convFee);})())">2 - Add Convenience Fee</a></li>
       </ul>
     </div>
   </div>

@@ -17,7 +17,7 @@
 
 <!-- Navbar -->
 <div class="w3-top">
-	<a href="#main-content" id="skipNavLink" class="visually-hidden visible-when-focused bypass-block-link" tabindex="1">Skip to Content</a>
+	<a href="#main-content" id="skipNavLink" class="visually-hidden visible-when-focused bypass-block-link">Skip to Content</a>
 	<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()" aria-label="Menu" id="openCloseMenu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-hide-small"><img src="images/SOPGuideLogo.png" alt="Liberty Ski Patrol SOP Guide Logo" class="splogo" style="margin-left:10px;"></img></a>
 	<a href="index.html" class="w3-bar-item w3-hide-medium w3-hide-large"><img src="images/SOPGuideSmall.png" alt="Liberty Ski Patrol SOP Guide Logo" style="margin-left:10px;"></img></a>
@@ -27,11 +27,17 @@
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-light-grey w3-animate-left" id="mySidebar" style="display:none">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-red w3-hide-large" title="Close Menu"><i class="fa fa-remove"></i></a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-red" href="index.html">Home</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="liftevac.html">Lift Evac</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="lostchild.html">Lost Child</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="open.html">Open</a>
-  <a class="w3-bar-item w3-button w3-red" href="close.html">Close</a>  
+	<ul class="li-menu">
+		<li><a class="w3-bar-item w3-button w3-hover-red" href="liftevac.html">Lift Evac</a></li>
+		<li><a class="w3-bar-item w3-button w3-hover-red" href="index.html">Home</a></li>
+		<li><a class="w3-bar-item w3-button w3-hover-red" href="lostchild.html">Lost Child</a></li>
+		<li><a class="w3-bar-item w3-button w3-hover-red" href="open.html">Open</a></li>
+		<li><a class="w3-bar-item w3-button w3-red" href="close.html">Close</a>
+			<ul>
+				<li class="li-submenu"><a href="#shift" class="w3-bar-item w3-button">Shift Super</a></li>
+			</ul>
+		</li>
+	</ul>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -42,13 +48,13 @@
 <div class="w3-main" style="margin-left:250px; margin-top:36px;">
 
   <div class="w3-row" style="padding-top: 64px">
-    <div class="w3-margin w3-container">
+    <div class="w3-margin-left w3-margin-right w3-margin-top w3-container">
       <h1>Closing (Evening Shift)</h1>
     </div>
   </div>
 
-	<div class="w3-margin w3-container w3-card w3-row">
-      <h2>Shift Captain's Checklist</h2>
+	<div class="w3-margin-right w3-margin-left w3-container w3-card w3-row">
+      <h2 id="shift">Shift Supervisor's Checklist</h2>
 		<ol>
 			<li>Contact morning Shift Captain or Paid Patrol Supervisor for handoff information and notify Risk Manager that there is a new Shift Captain. Contact Risk Manager, or designee, for shift briefing if necessary.</li>
 			<li>Arrange the radio transfer (Announce Patrol 1 change).</li>
@@ -160,13 +166,16 @@
 			<li>Lock all doors</li>
 
 		</ol>
-	</div> 
+	</div>
+	<div class="w3-margin w3-container w3-card w3-row">
+
+	</div>
 
 <!-- Footer -->
   <footer id="myFooter">
     <div class="w3-container w3-red w3-padding">
       <p>Liberty Ski Patrol SOP Guide</p>
-	  <p><i class="fa fa-copyright" aria-label="Copyright"></i> 2019 Liberty Ski Patrol | <a href="http://www.libertyskipatrol.org/" style="text-decoration:none;">http://www.libertyskipatrol.org/</a></p>
+	  <p><i class="fa fa-copyright" title="Copyright"></i> 2019 Liberty Ski Patrol | <a href="http://www.libertyskipatrol.org/" style="text-decoration:none;">http://www.libertyskipatrol.org/</a></p>
 	  <p><a href="https://github.com/drewnielson/SkiPatrolSOPs/issues">Submit an issue / suggestion</a> | <a href="https://github.com/drewnielson/SkiPatrolSOPs">View source files</a></p>
     </div>
   </footer>

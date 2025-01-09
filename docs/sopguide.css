@@ -12,6 +12,15 @@ label,legend {
 	font-size: 24px;
 }
 
+.li-menu {
+	list-style: none;
+	padding-left: 0;
+}
+
+.li-submenu {
+	list-style: none;
+}
+
 fieldset {
 	border: none;
 }

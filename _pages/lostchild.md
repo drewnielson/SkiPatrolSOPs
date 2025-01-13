@@ -1,54 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Liberty Ski Patrol SOP Guide</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/PatrolFavicon.png">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="w3-modified.css">
-<link rel="stylesheet" href="w3-theme-red.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="sopguide.css">
-<script src="timer.js"></script>
-</head>
-<body>
+---
+layout: page
+permalink: /lostchild/
+---
+# Lost Child Process Guide
 
-<!-- Navbar -->
-<div class="w3-top">
-	<a href="#main-content" id="skipNavLink" class="visually-hidden visible-when-focused bypass-block-link">Skip to Content</a>
-	<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()" aria-label="Menu" id="openCloseMenu"><i class="fa fa-bars"></i></a>
-	<span id="timer" class="w3-right"></span>
-    <a href="index.html" class="w3-bar-item w3-hide-small"><img src="images/SOPGuideLogo.png" alt="Liberty Ski Patrol SOP Guide Logo" class="splogo" style="margin-left:10px;"></img></a>
-	<a href="index.html" class="w3-bar-item w3-hide-medium w3-hide-large"><img src="images/SOPGuideSmall.png" alt="Liberty Ski Patrol SOP Guide Logo" style="margin-left:10px;"></img></a>
-</div>
-
-<!-- Sidebar -->
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-light-grey w3-animate-left" id="mySidebar" style="display:none">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-red w3-hide-large" title="Close Menu"><i class="fa fa-remove"></i></a>
-  <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-red" href="index.html">Home</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="liftevac.html">Lift Evac</a>
-  <a class="w3-bar-item w3-button w3-red" href="lostchild.html">Lost Child</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="open.html">Open</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="close.html">Close</a>  
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-<main id="main-content">
-<div class="w3-main" style="margin-left:250px; margin-top:36px;">
-
-
-  <div class="w3-row" style="padding-top: 64px">
-    <div class="w3-margin w3-container">
-      <h1>Lost Child Process Guide</h1>
-	  <p style="margin-top:-16px;"><a href="#lostParent">(skip to Lost Parent Procedure)</a></p>
-    </div>
-  </div>
 <form>
 	<div class="w3-margin w3-container w3-card w3-row">
       <h2>Assess and Notify</h2>
@@ -66,22 +21,21 @@
 				<td><input type="tel" id="notifierContact" placeholder="888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"></td>
 			</tr>
 		</table>
-	  
 	  <div class="w3-row w3-round w3-border w3-border-red substep">
 		<h6>Interview of reporting person:</h6>
 		<table>
 			<tr>
 				<td><label for="childName">Child's name:</label></td>
-				<td><input type="text" id="childName"></input></td>
+				<td><input type="text" id="childName"></td>
 			</tr>
 			<tr>
 				<td><label for="childAge">Child's age:</label></td>
-				<td><input type="number" id="childAge"></input></td>
+				<td><input type="number" id="childAge"></td>
 			</tr>
 			<tr>
 				<td><label id="childGender">Child's gender:</label></td>
-				<td><input type="radio" name="gender" value="Male" id="genderM" aria-describedby="childGender"><label for="genderM"> Male</label></input>
-					<input type="radio" name="gender" value="Femle" id="genderF" style="margin-left:5px;" aria-describedby="childGender"><label for="genderF"> Female</label></input>
+				<td><input type="radio" name="gender" value="Male" id="genderM" aria-describedby="childGender"><label for="genderM"> Male</label>
+					<input type="radio" name="gender" value="Femle" id="genderF" style="margin-left:5px;" aria-describedby="childGender"><label for="genderF"> Female</label>
 				</td>
 			</tr>
 		</table>
@@ -97,15 +51,15 @@
 			</tr>
 			<tr>
 				<td><label id="skiride">Skiing/snowboarding:</label></td>
-				<td><input type="radio" name="skiing" value="Y" id="skiY" aria-describedby="skiride"><label for="skiY"> Y</label></input>
-					<input type="radio" name="skiing" value="N" id="skiN" style="margin-left:5px;" aria-describedby="skiride"><label for="skiN"> N</label></input>
+				<td><input type="radio" name="skiing" value="Y" id="skiY" aria-describedby="skiride"><label for="skiY"> Y</label>
+					<input type="radio" name="skiing" value="N" id="skiN" style="margin-left:5px;" aria-describedby="skiride"><label for="skiN"> N</label>
 				</td>
 			</tr>
 			<tr>
 				<td><label id="ability">Ability level:</label></td>
-				<td><input type="radio" name="level" value="Beginner" id="levelB" aria-describedby="skiride"><label for="levelB"> Beg.</label></input>
-					<input type="radio" name="level" value="Intermediate" id="levelI" aria-describedby="skiride"><label for="levelI"> Int.</label></input>
-					<input type="radio" name="level" value="Advanced" id="levelA" style="margin-left:5px;" aria-describedby="skiride"><label for="levelA"> Adv.</label></input>
+				<td><input type="radio" name="level" value="Beginner" id="levelB" aria-describedby="skiride"><label for="levelB"> Beg.</label>
+					<input type="radio" name="level" value="Intermediate" id="levelI" aria-describedby="skiride"><label for="levelI"> Int.</label>
+					<input type="radio" name="level" value="Advanced" id="levelA" style="margin-left:5px;" aria-describedby="skiride"><label for="levelA"> Adv.</label>
 				</td>
 			</tr>
 			<tr>
@@ -139,8 +93,7 @@
 	  </div>
 	</div>
 </form>
-
-  <div class="w3-row">
+<div class="w3-row">
     <div class="w3-margin w3-container w3-card">
 	  <h2>Lost Child Procedures</h2>
       <h3>Step 1</h3>
@@ -190,7 +143,7 @@
 				<li>Full area search and patrol sweep (Patrol Supervisor) Radio Ch-2</li>
 				<li>Call other family or friends</li>
 			</ol>
-  </div>
+	</div>
 </div>
 <div class="w3-row">
     <div class="w3-margin w3-container w3-card">
@@ -198,23 +151,3 @@
 	  <p>When a child reports a lost parent, a staff member will accompany the child on a search of the immediate area. Then escort the child to guest services.</p>
 	 </div>
 </div>
-
-<!-- Footer -->
-  <footer id="myFooter">
-    <div class="w3-container w3-red w3-padding">
-      <p>Liberty Ski Patrol SOP Guide</p>
-	  <p><i class="fa fa-copyright" title="Copyright"></i> 2019 Liberty Ski Patrol | <a href="http://www.libertyskipatrol.org/" style="text-decoration:none;">http://www.libertyskipatrol.org/</a></p>
-	  <p><a href="https://github.com/drewnielson/SkiPatrolSOPs/issues">Submit an issue / suggestion</a> | <a href="https://github.com/drewnielson/SkiPatrolSOPs">View source files</a></p>
-    </div>
-  </footer>
-
-
-
-</main>
-<!-- END MAIN -->
-
-<script src="jquery-3.4.1.min.js"></script>
-<script src="sidebar.js"></script>
-
-</body>
-</html>

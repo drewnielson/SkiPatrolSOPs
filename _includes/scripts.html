@@ -1,0 +1,7 @@
+<!-- Scripts -->
+<script src="{{ site.baseurl }}/assets/js/sidebar.js"></script>
+{% if page.script_src %}
+  {% for script_src in page.scripts %}
+    <script src="{{ site.baseurl }}/assets/js/{{ script_src }}"></script>
+  {% endfor %}
+{% endif %}

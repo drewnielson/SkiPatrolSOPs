@@ -1,52 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Liberty Ski Patrol SOP Guide</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/PatrolFavicon.png">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="w3-modified.css">
-<link rel="stylesheet" href="w3-theme-red.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="sopguide.css">
-<script src="timer.js"></script>
-</head>
-<body>
-
-<!-- Navbar -->
-<div class="w3-top">
-	<a href="#main-content" id="skipNavLink" class="visually-hidden visible-when-focused bypass-block-link">Skip to Content</a>
-	<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()" aria-label="Menu" id="openCloseMenu"><i class="fa fa-bars"></i></a>
-	<span id="timer" class="w3-right"></span>
-    <a href="index.html" class="w3-bar-item w3-hide-small"><img src="images/SOPGuideLogo.png" alt="Liberty Ski Patrol SOP Guide Logo" class="splogo" style="margin-left:10px;"></img></a>
-	<a href="index.html" class="w3-bar-item w3-hide-medium w3-hide-large"><img src="images/SOPGuideSmall.png" alt="Liberty Ski Patrol SOP Guide Logo" style="margin-left:10px;"></img></a>
-</div>
-
-<!-- Sidebar -->
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-light-grey w3-animate-left" id="mySidebar" style="display:none">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-red w3-hide-large" title="Close Menu"><i class="fa fa-remove"></i></a>
-  <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-red" href="index.html">Home</a>
-  <a class="w3-bar-item w3-button w3-red" href="liftevac.html">Lift Evac</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="lostchild.html">Lost Child</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="open.html">Open</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="close.html">Close</a> 
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-<main id="main-content">
-<div class="w3-main" style="margin-left:250px; margin-top:36px;">
-
-  <div class="w3-row" style="padding-top: 64px">
-    <div class="w3-margin w3-container">
-      <h1>Lift Evac Process/Protocol Guide</h1>
-    </div>
-  </div>
+---
+layout: page
+permalink: /liftevac/
+---
+# Lift Evac Process/Protocol Guide
 
   <div class="w3-row">
     <div class="w3-margin w3-container w3-card">
@@ -73,8 +29,7 @@
 				</tr>
 			</table>
 		<ul><li>Base to monitor Ch.1; listen for mechanic dispatch</li></ul>
-		</div>
-		
+		</div>		
 		<div class="w3-margin-bottom w3-margin-top w3-border w3-border-red" style="padding: 5px; margin:-8px;">
 			<h6> 5 min: Notify Lift Maintenance</h6>
 			<p>(if not already done)</p>
@@ -89,8 +44,7 @@
 				</tr>
 			</table>
 		<ul><li>If lift maintenance is not available, notify resort management (MOD)</li></ul>
-		</div>
-		
+		</div>		
 		<div class="w3-margin-bottom w3-margin-top w3-border w3-border-red" style="padding: 5px; margin:-8px;">
 			<h6> 10 min: Stranded Staff</h6>
 			<table class="w3-table" id="tbStranded">
@@ -99,14 +53,12 @@
 						<th scope="col" class="w3-border w3-border-white" id="staff"># of staff</th>
 						<th scope="col" class="w3-border w3-border-white" id="tower">Tower #</th>
 						<th scope="col" class="w3-border w3-border-white" id="chair">Chair</th>
-						<th scope="col" class="w3-border w3-border-white">SP / MS</th>
 					</tr>
 				</thead>
 				<tr class="w3-border-bottom w3-border-red">
 					<td><input type="number" style="width:50px" aria-labelledby="staff"></td>
-					<td><input type="number" style="width:50px"aria-labelledby="tower"></td>
-					<td><input type="number" style="width:60px"aria-labelledby="chair"></td>
-					<td><input type="checkbox" id="patrol1"><label for="patrol1"> SP</label><br><input type="checkbox" id="ms1"><label for="ms1"> MS</label></td>
+					<td><input type="number" style="width:50px" aria-labelledby="tower"></td>
+					<td><input type="number" style="width:60px" aria-labelledby="chair"></td>
 				</tr>
 			</table>
 		<button class="w3-button w3-round w3-theme w3-margin" onclick="addStranded()">Add row</button>
@@ -184,9 +136,7 @@
 			<li>Mountain Safety: Record the name, address, phone, chair number and time of guest evacuation</li>
 			<li><strong>10 minutes updates to management</strong></li>
 			<li>Evacuation Supervisor: Direct final check of all chairs and sweep of the area; obtain “all clear” confirmation</li>
-
-		</ul>
-		
+		</ul>		
     </div>
   </div>
   <div class="w3-row">
@@ -210,24 +160,3 @@
 		</ul>
     </div>
   </div>
-  
-
-<!-- Footer -->
-  <footer id="myFooter">
-    <div class="w3-container w3-red w3-padding">
-      <p>Liberty Ski Patrol SOP Guide</p>
-	  <p><i class="fa fa-copyright" title="Copyright"></i> 2019 Liberty Ski Patrol | <a href="http://www.libertyskipatrol.org/" style="text-decoration:none;">http://www.libertyskipatrol.org/</a></p>
-	  <p><a href="https://github.com/drewnielson/SkiPatrolSOPs/issues">Submit an issue / suggestion</a> | <a href="https://github.com/drewnielson/SkiPatrolSOPs">View source files</a></p>
-    </div>
-  </footer>
-
-
-</div>
-</main>
-<!-- END MAIN -->
-
-<script src="jquery-3.4.1.min.js"></script>
-<script src="sidebar.js"></script>
-
-</body>
-</html>

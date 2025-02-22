@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: /mci/
+title: "Mass Casualty Incident"
 ---
 # Mass Casualty Incident (MCI) Response
 

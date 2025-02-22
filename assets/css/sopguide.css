@@ -5,6 +5,30 @@ label,legend {
 	font-weight:700;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #CC0000;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+th, td {
+    border: 1px solid gray;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for alternate rows */
+}
+
 #timer {
 	color:white;
 	font-weight:700;

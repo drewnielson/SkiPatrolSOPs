@@ -16,6 +16,7 @@ Use the navigation menu/bar or the links below to get to the applicable process 
 - [Lost Child]({{site.baseurl}}/lostchild)
 - [Open]({{site.baseurl}}/open/)
 - [Close]({{site.baseurl}}/close/)
+- [Mass Casualty Incident]({{site.baseurl}}/mci)
 
 ## Other Stuff
 

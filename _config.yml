@@ -24,8 +24,8 @@ primary_navigation:
     url: /open/
   - name: Close
     url: /close/
-  - name: Shifts
-    url: /shifts/
+  - name: Mass Casualty
+    url: /mci/
   - name: Ski Swap Bookmarklets
     url: /swap-fee/
 

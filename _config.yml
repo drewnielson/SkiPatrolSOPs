@@ -9,7 +9,7 @@ description: >-
   This website is intended primarily for the use of members of the 
   Liberty Mountain Ski Patrol and contains a collection of information, procedures, and tools
   to facilitate quick and easy reference.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/SkiPatrolSOPs/" # the subpath of your site, e.g. /blog
 url: "https://drewnielson.github.io/SkiPatrolSOPs/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Site Navigation

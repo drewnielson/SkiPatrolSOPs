@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: /close/
+title: "Closing"
 ---
 # Closing (Evening Shift)
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 permalink: /lostchild/
+title: "Lost Child"
+timer: true
 ---
 # Lost Child Process Guide
 

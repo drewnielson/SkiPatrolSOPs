@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: /open/
+title: "Opening"
 ---
 # Opening (Morning Shift)
 

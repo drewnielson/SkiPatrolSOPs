@@ -1,6 +1,11 @@
 ---
 layout: page
 permalink: /liftevac/
+title: "Lift Evac"
+timer: true
+script_src: 
+  - jquery-3.4.1.min.js
+  - timer.js
 ---
 # Lift Evac Process/Protocol Guide
 

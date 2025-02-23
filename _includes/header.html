@@ -2,6 +2,7 @@
 <div class="w3-top">
 	<a href="#main-content" id="skipNavLink" class="visually-hidden visible-when-focused bypass-block-link">Skip to Content</a>
 	<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()" aria-label="Menu" id="openCloseMenu"><i class="fa fa-bars"></i></a>
+	{% if page.timer %}<span id="timer" class="w3-right"></span>{% endif %}
     <a href="{{ site.baseurl }}" class="w3-bar-item w3-hide-small"><img src="{{ site.baseurl }}/assets/images/SOPGuideLogo.png" alt="Liberty Ski Patrol SOP Guide Logo" class="splogo" style="margin-left:10px;"></img></a>
 	<a href="{{ site.baseurl }}" class="w3-bar-item w3-hide-medium w3-hide-large"><img src="{{ site.baseurl }}/assets/images/SOPGuideSmall.png" alt="Liberty Ski Patrol SOP Guide Logo" style="margin-left:10px;"></img></a>
 </div>

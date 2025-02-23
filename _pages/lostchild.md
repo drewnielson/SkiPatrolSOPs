@@ -3,6 +3,9 @@ layout: page
 permalink: /lostchild/
 title: "Lost Child"
 timer: true
+script_src: 
+  - jquery-3.4.1.min.js
+  - timer.js
 ---
 # Lost Child Process Guide
 
